@@ -1,25 +1,24 @@
 package com.stackroute.annotation;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.*;
 
 @Configuration
+@PropertySource("classpath:/values.properties")
 public class ConfigClass {
-    @Bean
-    public Actor Allu()
+    @Bean(name = {"Allu","Prabhas"})
+    @Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+    public Actor Allu()//Allu is the name of ID or object
     {
         Actor actor=new Actor();
-        actor.setAge(34);
-        actor.setGender("male");
-        actor.setName("Allu Arjun");
         return actor;
 
     }
     @Bean(name={"Arya","DJ"})
     public Movie movieBean()//bean name is movieBean
      {
-        Movie movie=new Movie(Allu());
+        Movie movie=new Movie();
+        //movie.setActor(Allu());
         return movie;
 
     }
