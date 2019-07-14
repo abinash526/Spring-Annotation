@@ -7,6 +7,12 @@ import org.springframework.context.annotation.*;
 @PropertySource("classpath:/values.properties")
 public class ConfigClass {
     @Bean
+    public BeanPostProcessorDemoBean beanPostProcessorDemoBean()
+    {
+        return new BeanPostProcessorDemoBean();
+    }
+
+    @Bean
     public BeanLifecycleDemo beanLifecycleDemo(){
         return new BeanLifecycleDemo();
     }
