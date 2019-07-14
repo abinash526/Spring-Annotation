@@ -10,15 +10,20 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNameAware {
-    /*public void init()
+    @PostConstruct
+    public void init()
     {
-        System.out.println(nameOfBean+"  initialized");
+        System.out.println(nameOfBean+"  initialized---------------");
     }
+    @PreDestroy
     public void destroy()
     {
-        System.out.println(nameOfBean+" Destroyed Movie ");
-    }*/
+        System.out.println(nameOfBean+" Destroyed  ------------");
+    }
 
 
 

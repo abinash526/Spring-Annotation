@@ -18,7 +18,7 @@ public class Main {
 //        System.out.println("loaded");
         /*Movie movie=context.getBean("wanted",Movie.class);
         movie.act();*/
-
+        context.getBean("beanLifecycleDemo");
 
 
         if(context.getBean("Prabhas",Actor.class)==context.getBean("Allu",Actor.class))
@@ -29,8 +29,8 @@ public class Main {
         {
             System.out.println("not equal");
         }
-       /* context.getBean("beanLifeCycle");
-        context.registerShutdownHook();*/
+//        context.getBean("beanLifeCycle");
+        context.registerShutdownHook();
 
 
 
