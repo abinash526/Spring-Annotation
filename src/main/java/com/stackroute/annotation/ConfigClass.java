@@ -14,7 +14,7 @@ public class ConfigClass {
         return actor;
 
     }
-    @Bean(name={"Arya","DJ"})
+    @Bean(name={"DJ","Arya"})
     public Movie movieBean()//bean name is movieBean
      {
         Movie movie=new Movie();

@@ -12,7 +12,7 @@ public class Main {
         Object ob;
        // System.out.println("Hello");
        AbstractApplicationContext context=new AnnotationConfigApplicationContext(ConfigClass.class);
-        context.getBean("Arya", Movie.class).show();
+        context.getBean("DJ", Movie.class).show();
         context.getBean("Prabhas",Actor.class).act();
 
 //        System.out.println("loaded");
